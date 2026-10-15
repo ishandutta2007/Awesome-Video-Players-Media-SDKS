@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="100%" height="280">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Filter for soft neon glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .bg-pattern {
+      opacity: 0.12;
+      animation: shiftGrid 24s linear infinite;
+    }
+    @keyframes shiftGrid {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .pulse-circle {
+      animation: pulseGlow 4s ease-in-out infinite alternate;
+    }
+    @keyframes pulseGlow {
+      0% { transform: scale(1); opacity: 0.25; }
+      100% { transform: scale(1.18); opacity: 0.55; }
+    }
+
+    .stream-wave {
+      animation: waveFlow 6s ease-in-out infinite alternate;
+    }
+    @keyframes waveFlow {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 80; }
+    }
+
+    .eq-bar-1 { animation: eqBounce 1.4s ease-in-out infinite alternate; }
+    .eq-bar-2 { animation: eqBounce 1.1s ease-in-out infinite alternate 0.3s; }
+    .eq-bar-3 { animation: eqBounce 1.6s ease-in-out infinite alternate 0.6s; }
+    .eq-bar-4 { animation: eqBounce 1.2s ease-in-out infinite alternate 0.2s; }
+    .eq-bar-5 { animation: eqBounce 1.5s ease-in-out infinite alternate 0.5s; }
+    @keyframes eqBounce {
+      0% { height: 12px; y: 46px; }
+      100% { height: 38px; y: 20px; }
+    }
+
+    .badge-float {
+      animation: badgeFloat 3.5s ease-in-out infinite alternate;
+    }
+    @keyframes badgeFloat {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-5px); }
+    }
+
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .tag-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+    }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1000" height="280" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Ambient Glows (Behind all content) -->
+  <circle cx="150" cy="140" r="130" fill="url(#accentGlow)" class="pulse-circle" />
+  <circle cx="850" cy="140" r="160" fill="url(#accentGlow)" class="pulse-circle" style="animation-delay: -2s;" />
+
+  <!-- Animated Playback Grid Lines -->
+  <g class="bg-pattern" stroke="#38bdf8" stroke-width="1">
+    <line x1="60" y1="40" x2="940" y2="40" stroke-dasharray="4,8" />
+    <line x1="60" y1="140" x2="940" y2="140" stroke-dasharray="2,12" />
+    <line x1="60" y1="240" x2="940" y2="240" stroke-dasharray="4,8" />
+    <line x1="200" y1="20" x2="200" y2="260" stroke-dasharray="6,12" />
+    <line x1="500" y1="20" x2="500" y2="260" stroke-dasharray="6,12" />
+    <line x1="800" y1="20" x2="800" y2="260" stroke-dasharray="6,12" />
+  </g>
+
+  <!-- Flowing Signal Stream (Decorative Background Line) -->
+  <path d="M 50 210 Q 250 160 500 210 T 950 190" fill="none" stroke="url(#primaryGrad)" stroke-width="2.5" stroke-opacity="0.35" stroke-dasharray="8,6" class="stream-wave" />
+
+  <!-- Dynamic Equalizer Widget (Top Right) -->
+  <g transform="translate(860, 35)">
+    <rect class="eq-bar-1" x="0" y="30" width="5" height="20" rx="2.5" fill="#38bdf8" opacity="0.8" />
+    <rect class="eq-bar-2" x="9" y="24" width="5" height="26" rx="2.5" fill="#6366f1" opacity="0.85" />
+    <rect class="eq-bar-3" x="18" y="15" width="5" height="35" rx="2.5" fill="#a855f7" opacity="0.9" />
+    <rect class="eq-bar-4" x="27" y="22" width="5" height="28" rx="2.5" fill="#ec4899" opacity="0.85" />
+    <rect class="eq-bar-5" x="36" y="32" width="5" height="18" rx="2.5" fill="#38bdf8" opacity="0.8" />
+  </g>
+
+  <!-- Left Video Play Icon (Glassmorphic) -->
+  <g transform="translate(60, 48)">
+    <!-- Outer Ring with soft glow -->
+    <circle cx="36" cy="36" r="34" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#softGlow)" opacity="0.9" />
+    <!-- Gradient Fill for Play Button -->
+    <polygon points="28,22 50,36 28,50" fill="url(#primaryGrad)" />
+    <!-- Dynamic Indicator Dot -->
+    <circle cx="56" cy="18" r="4.5" fill="#ef4444" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- FOREGROUND TEXT (Carefully positioned to stay clear of dynamic elements) -->
+  <g transform="translate(155, 68)">
+    <!-- Overline Category -->
+    <text x="0" y="0" fill="#38bdf8" font-size="13" font-weight="700" letter-spacing="1.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+      CURATED ECOSYSTEM &amp; BENCHMARK
+    </text>
+
+    <!-- Main Title -->
+    <text x="0" y="44" fill="#ffffff" font-size="34" class="title-text">
+      Awesome Video Players &amp; Media SDKs
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="78" fill="#94a3b8" font-size="16" class="subtitle-text">
+      Production-Ready HTML5 Players, ABR Streaming Engines (HLS/DASH) &amp; Enterprise Media SDKs
+    </text>
+  </g>
+
+  <!-- Dynamic Interactive Chips / Badges Row (Bottom Foreground) -->
+  <g transform="translate(155, 185)" class="badge-float">
+    <!-- Chip 1: HLS / DASH -->
+    <g transform="translate(0, 0)">
+      <rect width="112" height="30" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.95" />
+      <circle cx="16" cy="15" r="4" fill="#38bdf8" />
+      <text x="28" y="19" fill="#e2e8f0" class="tag-text">HLS &amp; MPEG-DASH</text>
+    </g>
+
+    <!-- Chip 2: Low-Latency & WebRTC -->
+    <g transform="translate(124, 0)">
+      <rect width="100" height="30" rx="8" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" opacity="0.95" />
+      <circle cx="16" cy="15" r="4" fill="#818cf8" />
+      <text x="28" y="19" fill="#e2e8f0" class="tag-text">Low Latency</text>
+    </g>
+
+    <!-- Chip 3: Multi-DRM -->
+    <g transform="translate(236, 0)">
+      <rect width="138" height="30" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.2" opacity="0.95" />
+      <circle cx="16" cy="15" r="4" fill="#a855f7" />
+      <text x="28" y="19" fill="#e2e8f0" class="tag-text">Multi-DRM Security</text>
+    </g>
+
+    <!-- Chip 4: Cross-Platform -->
+    <g transform="translate(386, 0)">
+      <rect width="158" height="30" rx="8" fill="#1e293b" stroke="#ec4899" stroke-width="1.2" opacity="0.95" />
+      <circle cx="16" cy="15" r="4" fill="#ec4899" />
+      <text x="28" y="19" fill="#e2e8f0" class="tag-text">Web • Mobile • Smart TVs</text>
+    </g>
+
+    <!-- Chip 5: Open Source & SaaS -->
+    <g transform="translate(556, 0)">
+      <rect width="150" height="30" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.2" opacity="0.95" />
+      <circle cx="16" cy="15" r="4" fill="#10b981" />
+      <text x="28" y="19" fill="#e2e8f0" class="tag-text">Open-Source &amp; SaaS</text>
+    </g>
+  </g>
+
+  <!-- Border Outline -->
+  <rect x="0.75" y="0.75" width="998.5" height="278.5" rx="15.25" fill="none" stroke="#334155" stroke-width="1.5" />
+</svg>
