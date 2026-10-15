@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Video-Players-Media-SDKS/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Video-Players-Media-SDKS?style=flat-square&logo=github&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Video-Players-Media-SDKS/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Video-Players-Media-SDKS?style=flat-square&logo=github&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Video-Players-Media-SDKS/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Video-Players-Media-SDKS?style=flat-square&logo=github&color=blue" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Video-Players-Media-SDKS/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Video-Players-Media-SDKS?style=flat-square&color=orange" alt="Open Issues"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Video-Players-Media-SDKS/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-success?style=flat-square" alt="License"/></a>
@@ -76,9 +76,9 @@ The web playback ecosystem is fundamentally powered by open-source libraries. Be
 
 ### 🏆 Master Open-Source Comparison (Ranked by Stars)
 
-> **Sorted by GitHub Stars (Descending)**
+> **Sorted by GitHub_Stars (Descending)**
 
-| Rank | 📦 Repository & Name | ⭐ Star Count & Stargazers Link | 🎯 Category / Core Focus | 💻 Key Platforms | 📄 License |
+| Rank | 📦 Repository & Name | ⭐ Stars_Count & Stargazers Link | 🎯 Category / Core Focus | 💻 Key Platforms | 📄 License |
 | :---: | :--- | :---: | :--- | :--- | :---: |
 | 1 | **[videojs/video.js](https://github.com/videojs/video.js)** | [![Stars](https://img.shields.io/github/stars/videojs/video.js?style=social&color=white)](https://github.com/videojs/video.js/stargazers) | Full Web Player & UI Framework | Web (HTML5, Browsers) | Apache-2.0 |
 | 2 | **[mpv-player/mpv](https://github.com/mpv-player/mpv)** | [![Stars](https://img.shields.io/github/stars/mpv-player/mpv?style=social&color=white)](https://github.com/mpv-player/mpv/stargazers) | Desktop Media Engine & Embeddable C API | Windows, macOS, Linux | GPL-2.0+ / LGPL-2.1+ |
@@ -205,8 +205,8 @@ We welcome contributions from video engineers, streaming architects, and open-so
 1. 🍴 **Fork the repository** on GitHub.
 2. 🌿 **Create a new branch**: `git checkout -b feature/add-new-player`.
 3. 📝 **Add or update entries** in `README.md` keeping formatting consistent:
-   - Provide platform name, official URL, and exact starting pricing or star count.
-   - For open-source repos, include the shields.io social star badge linking to `/stargazers`.
+   - Provide platform name, official URL, and exact starting pricing or Stars_Count.
+   - For open-source repos, include the shields.io social Stars_Badge linking to `/stargazers`.
    - Keep descriptions objective, technical, and accurate.
 4. 🚀 **Commit and push** your branch, then open a Pull Request.
 
